@@ -16,11 +16,13 @@ Users should be able to:
 * JavaScript
 * Responsive website
 
-## Screenshots
+## Screenshots  (coming soon)
 [Home]()
 [Crew]()
 [Destination]()
 [Technology]()
+
+## :computer: [Demo]() :computer: (coming soon)
 
 ## Author
 [Stanislava Stoeva](https://github.com/StasiS-web) 

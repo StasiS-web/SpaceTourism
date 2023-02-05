@@ -6,41 +6,53 @@
   <meta name="keywords" content="SpaceTourism" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!--------------- Google fonts --------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="/spaceTourism/assets/plugins/fontawesome-free/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/style.css">
+  <!--------------- Our custom CSS --------------->
+  <link rel="stylesheet" href="/spaceTourism/assets/css/style.css" />
   <title>Space tourism website</title>
 </head>
-<body>
-
-  <header>
-    <nav class="navbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="./index.html"> 00 Home</a>
+<body class="home">
+<!--------------- HEADER & NAV --------------->
+  <header class="primary-header">
+    <div class="logo">
+      <img src="/spaceTourism/assets/img/shared/logo.svg" alt="space tourism logo">
+    </div>
+    <div class="line"></div>
+    <nav>
+      <ul class="primary-nav underline-indicators flex">
+        <li class="active">
+          <a class="uppercase letter-spacing-2" href="./index.html" > <span>00</span> Home</a>
         </li>
-        <li class="nav-item">
-          <a href="./destination/destination-moon.html"> 01 Destination</a>
+        <li>
+          <a class="uppercase letter-spacing-2" href="./destination/destination-moon.html"> <span>01</span> Destination</a>
         </li>
-        <li class="nav-item">
-          <a href="./crew/crew-commander.html"> 02 Crew </a>
+        <li>
+          <a class="uppercase letter-spacing-2" href="./crew/crew-commander.html"> <span>02</span> Crew </a>
         </li>
-        <li class="nav-item">
-          <a href="./technology/technology-vehicle.html"> 03 Technology</a>
+        <li>
+          <a class="uppercase letter-spacing-2" href="./technology/technology-vehicle.html"> <span>03</span> Technology</a>
         </li>
       </ul>
     </nav>
   </header>
- 
-  <main>
-    So, you want to travel to
-    Space
-    Let’s face it; if you want to go to space, you might as well genuinely go to 
-    outer space and not hover kind of on the edge of it. Well sit back, and relax 
-    because we’ll give you a truly out of this world experience!
-
-    Explore
+  <!--------------- MAIN --------------->
+  <main class="grid-container">
+      <div>
+        <h1 class="uppercase letter-spacing-1">So, you want to travel to
+          <span class="subtitle">Space</span></h1>
+          <p class="desc">
+            Let’s face it; if you want to go to space, you might as well genuinely go to 
+            outer space and not hover kind of on the edge of it. Well sit back, and relax 
+            because we’ll give you a truly out of this world experience!
+          </p>
+      </div>
+      <div>
+        <a href="#" class="large-btn uppercase letter-spacing-4">Explore</a>
+      </div>
   </main>
 
 <!-- jQuery -->

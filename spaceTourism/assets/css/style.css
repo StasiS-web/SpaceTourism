@@ -1,4 +1,5 @@
 :root{
+/*  Colors  */
     --primary-color: rgb(11, 13, 23);
     --secondary-color: rgb(208, 214, 249);
     --crl-white: rgb(255, 255, 255);
@@ -11,15 +12,37 @@
 /* Font weight  */
     --font-regular: 400;
     --font-bold: 700;
-/* Font sizes  */
-    --fs-900: 9.375rem;
-    --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
-    --fs-600: 2rem;
+
+    /* Font sizes  */
+    --fs-900: 5rem;
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
+}
+
+@media (min-width: 35em){
+    :root{
+        /* Font sizes  */
+        --fs-900: 9.375rem;
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em){
+    :root{
+        /* Font sizes  */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
+    }
 }
 
 /*========== RESET ==========*/
@@ -109,7 +132,7 @@ button{
     border: 5px solid limegreen;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
     .grid-container{
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 30rem)) minmax(2em, 1fr);
@@ -212,9 +235,25 @@ button{
     margin: 2rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
+.line{
+    width: 473px;
+    height: 1px;
+    left: 167px;
+    top: 88px;
+    background: var(--crl-white);
+    mix-blend-mode: normal;
+    opacity: .25;
+}
+
 .primary-header{
+    display: inline-flex;
+    position: absolute;
     justify-content: space-between;
     align-items: center;
+    width: 1385px;
+    height: 96px;
+    left: 55px;
+    top: 40px;
 }
 
 .primary-nav{

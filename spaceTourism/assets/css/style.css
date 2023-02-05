@@ -124,12 +124,6 @@ select{
     margin-top: var(--flow-space, 1rem);
 }
 
-.container{
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 80rem;
-}
-
 .grid-container{
     display: grid;
     border: 5px solid limegreen;
@@ -235,7 +229,7 @@ select{
 
 /*=============== HEADER & NAV ===============*/
 .logo{
-    margin: 2rem clamp(1.5rem, 5vw, 3.5rem);
+    margin: 1.3rem clamp(1.5rem, 5vw, 3rem);
 }
 
 .line{
@@ -260,7 +254,7 @@ select{
 }
 
 .primary-nav{
-    --gap: 8rem;
+    --gap: clamp(1.5rem, 5vw, 3rem);
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -379,12 +373,17 @@ h5,
 /*=============== TECHNOLOGY ===============*/
 
 /*=============== FOOTER ===============*/
+footer{
+    position: sticky;
+    top: 100vh;
+}
 .challenges p{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: .9rem;
 }
 
 .challenges > *:first-child{

@@ -1,15 +1,16 @@
+/*=============== CUSTOM PROPERTIES ===============*/
 :root{
-/*  Colors  */
+    /*  Colors  */
     --primary-color: rgb(11, 13, 23);
     --secondary-color: rgb(208, 214, 249);
     --crl-white: rgb(255, 255, 255);
 
-/*  Font and typography  */
+    /*  Font and typography  */
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
     --ff-sans-normal: "Barlow", sans-serif;
 
-/* Font weight  */
+    /* Font weight  */
     --font-regular: 400;
     --font-bold: 700;
 
@@ -57,6 +58,9 @@
 *{
     margin: 0;
     padding: 0;
+}
+
+;:focus{
     outline: none;
 }
 
@@ -78,7 +82,8 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+p{
     font-weight: var(--font-regular);
 }
 
@@ -120,19 +125,33 @@ select{
     gap: var(--gap, 1rem);
 }
 
+.d-block{
+    display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
 
 .grid-container{
     display: grid;
+    text-align: center;
+    place-content: center;
+    row-gap: 10%;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
     border: 5px solid limegreen;
+}
+
+.grid-container *{
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container{
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 30rem)) minmax(2em, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
     }
 
     .grid-container > *:first-child{
@@ -143,6 +162,11 @@ select{
     .grid-container > *:last-child{
         grid-column: 3;
         outline: 1px solid yellow;
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
 
@@ -191,22 +215,20 @@ select{
     color: rgb(255, 255, 255, .25);
 }
 
-
 /*========== COMPONENTS ==========*/
 .large-btn{
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
     place-items: center;
-    padding-inline: 2rem;
+    padding: 0 2rem;
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
     color: var(--primary-color);
-    background-color: var(--crl-white);
     font-family: var(--ff-serif);
-    font-size: var(--fs-600);
-    margin-top: 20rem;
+    background-color: var(--crl-white);
 }
 
 .large-btn::after{
@@ -246,6 +268,7 @@ select{
     display: inline-flex;
     position: absolute;
     justify-content: space-between;
+    background-color: transparent;
     align-items: center;
     width: 1385px;
     height: 96px;
@@ -254,7 +277,7 @@ select{
 }
 
 .primary-nav{
-    --gap: clamp(1.5rem, 5vw, 3rem);
+    --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -263,6 +286,7 @@ select{
 }
 
 .primary-nav a{
+    display: inline-flex;
     color: var(--crl-white);
     text-decoration: none;
 }
@@ -313,23 +337,27 @@ select{
     background-color: rgba(255, 255, 255, 1);
 }
 
-/*=============== HOME ===============*/
-.home{
-    background-image: url("/spaceTourism/assets/img/home/background-home-mobile.jpg");
+/*=============== PGE SPECIFIC BACKGROUND ===============*/
+body{
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/*=============== HOME ===============*/
+.home{
+    background-image: url("../img/home/background-home-mobile.jpg");
 }
 
 @media (min-width: 35em) {
     .home{
         background-position: center center;
-        background-image: url("/spaceTourism/assets/img/home/background-home-tablet.jpg");
+        background-image: url("../img/home/background-home-tablet.jpg");
     }
 }
 
 @media (min-width: 45em) {
     .home{
-        background-image: url("/spaceTourism/assets/img/home/background-home-desktop.jpg");
+        background-image: url("../img/home/background-home-desktop.jpg");
     }
 }
 
@@ -362,20 +390,69 @@ h5,
     font-weight: var(--font-regular);
 }
 
-
-
 /*=============== DESTINATION ===============*/
+.destination{
+    background-image: url("../img/destination/background-destination-mobile.jpg");
+}
+
+@media (min-width: 35em) {
+    .destination{
+        background-position: center center;
+        background-image: url("../img/destination/background-destination-tablet.jpg");
+    }
+}
+
+@media (min-width: 45em) {
+    .destination{
+        background-image: url("../img/destination/background-destination-desktop.jpg");
+    }
+}
 
 
 /*=============== CREW ===============*/
+.crew{
+    background-image: url("../img/crew/background-crew-mobile.jpg");
+}
+
+@media (min-width: 35em) {
+    .crew{
+        background-position: center center;
+        background-image: url("../img/crew/background-crew-tablet.jpg");
+    }
+}
+
+@media (min-width: 45em) {
+    .crew{
+        background-image: url("../img/crew/background-crew-desktop.jpg");
+    }
+}
 
 
 /*=============== TECHNOLOGY ===============*/
+.technology{
+    background-image: url("../img/technology/background-technology-mobile.jpg");
+}
+
+@media (min-width: 35em) {
+    .technology{
+        background-position: center center;
+        background-image: url("../img/technology/background-technology-tablet.jpg");
+    }
+}
+
+@media (min-width: 45em) {
+    .technology{
+        background-image: url("../img/technology/background-technology-desktop.jpg");
+    }
+}
+
 
 /*=============== FOOTER ===============*/
 footer{
     position: sticky;
     top: 100vh;
+    margin-top: 10%;
+    margin-bottom: 8%;
 }
 .challenges p{
     display: flex;

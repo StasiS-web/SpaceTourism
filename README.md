@@ -10,9 +10,10 @@ Users should be able to:
   * View each page and navigate between the links too see new information
 
 ## :hammer: Used technologies
-* HTML5
+* Sematic HTML5
 * CSS
 * CSS Grid
+* FlexBox
 * JavaScript
 * Responsive website
 
@@ -23,6 +24,9 @@ Users should be able to:
 [Technology]()
 
 ## :computer: [Demo]() :computer: (coming soon)
+
+## Useful Resources
+ * [Figma]() - use the project design mockups to check for size, colors. etc.
 
 ## Author
 [Stanislava Stoeva](https://github.com/StasiS-web) 

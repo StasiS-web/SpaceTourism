@@ -17,14 +17,15 @@
 </head>
 <body class="home">
 <!--------------- HEADER & NAV --------------->
-  <header class="primary-header">
-    <!--------------- Logo ---------------> 
-    <div class="logo">
+  <header class="primary-header flex">
+    <div class="barnd">
       <img src="./assets/img/shared/logo.svg" alt="space tourism logo">
     </div>
-    <div class="line"></div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
     <nav>
-      <ul class="primary-nav underline-indicators flex">
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
         <li class="active">
           <a class="uppercase letter-spacing-2" href="./index.html" > <span>00</span> Home</a>
         </li>
@@ -39,7 +40,9 @@
         </li>
       </ul>
     </nav>
+    <!-- my ::after is here --> 
   </header>
+  
   <!--------------- MAIN --------------->
   <main class="grid-container grid-container--home">
       <div>

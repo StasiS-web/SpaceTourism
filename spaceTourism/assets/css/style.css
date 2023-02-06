@@ -5,7 +5,7 @@
     --secondary-color: rgb(208, 214, 249);
     --crl-white: rgb(255, 255, 255);
 
-    /*  Font and typography  */
+    /*  Fonts and typography  */
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
     --ff-sans-normal: "Barlow", sans-serif;
@@ -15,7 +15,7 @@
     --font-bold: 700;
 
     /* Font sizes  */
-    --fs-900: 5rem;
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375);
     --fs-800: 3.5rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
@@ -27,7 +27,6 @@
 
 @media (min-width: 35em){
     :root{
-        /* Font sizes  */
         --fs-900: 9.375rem;
         --fs-800: 5rem;
         --fs-700: 2.5rem;
@@ -49,32 +48,28 @@
 /*========== RESET ==========*/
 /*  Box sizing  */
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 /* Reset Margins & Paddings */
-*{
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture{
     margin: 0;
     padding: 0;
 }
 
+
 ;:focus{
     outline: none;
-}
-
-/* Set up the body */
-body{
-    display: grid;
-    min-height: 100vh;
-    line-height: 1.5;
-    font-size: var(--fs-400);
-    color: var(--crl-white);
-    font-family: var(--ff-sans-normal);
-    background-color: var(--primary-color);
-    grid-template-rows: min-content 1fr;
-    overflow-x: hidden;
 }
 
 h1,
@@ -87,6 +82,19 @@ p{
     font-weight: var(--font-regular);
 }
 
+/* Set up the body */
+body{
+    min-height: 100vh;
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    color: var(--crl-white);
+    font-family: var(--ff-sans-normal);
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
+}
+
 /* Easier to work with img */
 img,
 picture {
@@ -97,8 +105,7 @@ picture {
 /*  Easier to work with  elements */
 input,
 button {
-    font-family: inherit;
-    font-weight: inherit;
+    font: inherit;
 }
 
 @supports selector(:focus-visible) {
@@ -125,6 +132,7 @@ button {
 }
 
 /*========== UTILITY CLASSES ==========*/
+/*  General */
 .flex{
     display: flex;
     gap: var(--gap, 1rem);
@@ -187,6 +195,21 @@ button {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
+}
+
+.skip-to-content{
+    position: absolute;
+    z-index: 9999;
+    background-color: var(--crl-white);
+    color: var(--primary-color);
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus{
+    transform: translateY(0);
 }
 
 .letter-spacing-1 {
@@ -356,13 +379,13 @@ button {
 }
 
 @media (min-width: 45rem) {
-
+   
     .primary-header::after{
         content: '';
         display: block;
         position: relative;
         height: 1.5px;
-        width: 100%;
+        width: 50%;
         opacity: .25;
         margin-right: -2.5rem;
         mix-blend-mode: normal;
@@ -386,7 +409,6 @@ button {
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     border-bottom: .2rem solid rgba(255, 255, 255, 0);
-    background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -538,6 +560,7 @@ footer{
     margin-top: 10%;
     margin-bottom: 8%;
 }
+
 .challenges p{
     display: flex;
     justify-content: center;

@@ -1,3 +1,4 @@
+/*--- Show mobile navigation ---*/
 const toggleBtn = document.querySelector('.mobile-nav-toggle');
 const nav = document.querySelector('.primary-navigation');
 

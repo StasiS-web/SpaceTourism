@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/spaceTourism/assets/img/favicon-32x32.png">
-  
-  <!--------------- Google fonts --------------->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap">
-  
-  <!--------------- Our custom CSS --------------->
-  <link rel="stylesheet" href="/spaceTourism/assets/css/style.css" />
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body class="destination">
-<a class="skip-to-content" href="#main">Skip to content</a>
-<!--------------- HEADER & NAV --------------->
-<header class="primary-header flex">
-  <div class="barnd">
-    <img src="../assets/img/shared/logo.svg" alt="space tourism logo">
-  </div>
-  <button class="mobile-nav-toggle" aria-controls="primary-navigation">
-      <span class="sr-only" aria-expanded="false">Menu</span>
-  </button>
-  <nav>
-    <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-      <li>
-        <a class="uppercase letter-spacing-2" href="../index.html" > <span>00</span> Home</a>
-      </li>
-      <li class="active">
-        <a class="uppercase letter-spacing-2" href="../destination/destination-moon.html"> <span>01</span> Destination</a>
-      </li>
-      <li>
-        <a class="uppercase letter-spacing-2" href="../crew/crew-commander.html"> <span>02</span> Crew </a>
-      </li>
-      <li>
-        <a class="uppercase letter-spacing-2" href="../technology/technology-vehicle.html"> <span>03</span> Technology</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- my ::after is here --> 
-</header>
-  
-  <!--------------- MAIN --------------->
-  <main class="grid-container">
-  01 Pick your destination
+    <link rel="icon" type="image/png" sizes="32x32" href="/spaceTourism/assets/img/favicon-32x32.png"/>
 
-  Moon
-  Mars
-  Europa
-  Titan
+    <!--------------- Google fonts --------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap" />
 
-  Moon
+    <!--------------- Our custom CSS --------------->
+    <link rel="stylesheet" href="/spaceTourism/assets/css/style.css" />
 
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="destination">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <!--------------- HEADER & NAV --------------->
+    <header class="primary-header flex">
+      <div class="brand">
+        <img src="../assets/img/shared/logo.svg" alt="space tourism logo" />
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+      <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+          <li>
+            <a class="uppercase letter-spacing-2" href="../index.html"><span>00</span> Home</a>
+          </li>
+          <li class="active">
+            <a class="uppercase letter-spacing-2" href="../destination/destination-moon.html"><span>01</span> Destination</a>
+          </li>
+          <li>
+            <a class="uppercase letter-spacing-2" href="../crew/crew-commander.html"><span>02</span> Crew</a>
+          </li>
+          <li>
+            <a class="uppercase letter-spacing-2" href="../technology/technology-vehicle.html"><span>03</span> Technology</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- my ::after is here -->
+    </header>
 
-  Avg. distance
-  384,400 km
+    <!--------------- MAIN --------------->
+    <main class="grid-container destination-nav underline-indicators flex" data-visible="false">
+      <div id="left-content">
+        <h1 class="uppercase destination-title"><span>01</span> Pick your destination</h1>
+        <img src="../assets/img/destination/image-moon.webp" alt="moon" />
+      </div>
+      <br>
+      <div id="right-content">
+        <ul id="destination-nav" class="underline-indicators flex">
+          <li class="active">
+            <a class="uppercase letter-spacing-2" href="../destination/destination-moon.html">Moon</a>
+          </li>
+          <li>
+            <a class="uppercase letter-spacing-2" href="../destination/destination-mars.html">Mars</a>
+          </li>
+          <li>
+            <a class="uppercase letter-spacing-2" href="../destination/destination-europa.html">Europa</a>
+          </li>
+          <li>
+            <a class="uppercase letter-spacing-2" href="../destination/destination-titan.html">Titan</a>
+          </li>
+        </ul>
+        <h2 class="uppercase">Moon</h2>
+        <p class="destination-content">
+          See our planet as you've never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you're
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <hr class="solid">
+        <div class="data">
+          <p class="uppercase"><span class="destination-data">Avg. distance</span><br /> 384,400 km</p>
+          <p class="uppercase"><span class="destination-data">Est. travel time</span><br /> 33 days</p>
+        </div>
+      </div>
+    </main>
 
-  Est. travel time
-  3 days
-  </main>
-  
-  <!--------------- FOOTER --------------->
-  <footer>
-    <div class="challenges">
-      <p>
-        Challenge by	&nbsp; <a href="https://www.frontendmentor.io/challenges" class="challenge-link">Frontend Mentor</a>
-      </p>
-      <p>
-        &copy; Coded with &#128150; by	&nbsp; <a href="https://github.com/StasiS-web" class="profile">Stanislava Stoeva</a>
-      </p>
-    </div>
-  </footer>
-</body>
+    <!--------------- FOOTER --------------->
+    <footer>
+      <div class="challenges">
+        <p>
+          Challenge by &nbsp;
+          <a href="https://www.frontendmentor.io/challenges" class="challenge-link">Frontend Mentor</a>
+        </p>
+        <p>
+          &copy; Coded with &#128150; by &nbsp;
+          <a href="https://github.com/StasiS-web" class="profile">Stanislava Stoeva</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

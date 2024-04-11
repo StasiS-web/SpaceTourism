@@ -21,7 +21,6 @@
     --fs-600: 1rem;
     --fs-500: 1.75rem;
     --fs-400: 0.9375rem;
-    --fs-300: 1rem;
     --fs-200: 0.875rem;
 }
 
@@ -245,6 +244,13 @@ button {
     color: rgb(255, 255, 255, .25);
 }
 
+.left-content{
+    float: left;
+    margin-bottom: .5rem;
+}
+
+
+
 /*========== COMPONENTS ==========*/
 .large-btn{
     font-size: 2rem;
@@ -300,6 +306,7 @@ button {
     -webkit-backdrop-filter: blur(2rem) saturate(200%); 
 }
 
+#destination-nav .active a,
 .primary-navigation a{
     display: inline-flex;
     color: var(--crl-white);
@@ -498,7 +505,70 @@ h5,
 
 /*=============== DESTINATION ===============*/
 .destination{
+    display: grid;
     background-image: url("../img/destination/background-destination-mobile.jpg");
+}
+
+div .destination-title{
+    margin-bottom: 45px;
+}
+
+div .destination-title span {
+    color: #383B4B;
+}
+
+#destination-nav{
+    list-style: none;
+}
+
+#destination-nav a{
+    display: inline-flex;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Solid border */
+hr .solid {
+    border-top: 3px solid #383B4B;
+}
+
+p .destination-data{
+    color: var(--secondary-color);
+    justify-content: space-between;
+}
+
+div .destination-content{
+    color: var(--secondary-color);
+    margin-bottom: 75px;
+}
+
+#left-content img {
+    margin-top: 140px;
+}
+
+#right-content{
+    border-bottom: 0px;
+    padding: 0px;
+    margin-left: 120px;
+    margin-top: -550px;
+}
+
+#right-content h2{
+    font-size: 115px;
+}
+
+#right-content .data {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right-content .data p{
+    display: inline-flex;
+    font-size: var(--fs-500);
+}
+
+#right-content .data p span{
+    font-size: var(--fs-200);
 }
 
 @media (min-width: 35em) {
